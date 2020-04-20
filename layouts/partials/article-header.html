@@ -9,7 +9,7 @@
     {{- end -}}
     {{- if .Date -}}
         {{- $dateFormat := .Date.Format $dateFormat -}}
-        <p class="article date">{{- $dateFormat -}}
+        <p class="article date">{{- $.Param "shamsiDate"  -}}
             {{- if and ($lastmod.After .Date) (ne $lastmodFormat $dateFormat) -}}
                 <span class="lastmod">{{- printf (T "edited") $lastmodFormat -}}</span>
             {{- end -}}
